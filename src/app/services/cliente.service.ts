@@ -1,0 +1,24 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ClienteService {
+
+  constructor(private http: HttpClient) {
+
+  }
+
+  getClientes(){
+    let url = environment.WS_PATH + "/clientes/list"
+    return this.http.get<any>(url)
+  }
+
+  getClientePorCedula(){
+    let url = environment.WS_PATH + "/clientes/list"
+    return this.http.get<any>(url)
+  }
+
+}

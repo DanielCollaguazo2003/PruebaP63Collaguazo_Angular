@@ -1,0 +1,24 @@
+
+<div class="formualario-container">
+  <form>
+    <label >Cedula</label>
+    <input type="text">
+  </form>
+</div>
+
+<div class="lista-content">
+  <hr/>
+<table>
+  <tr>
+    <th>Cedula</th>
+    <th>Nombre</th>
+    <th>Lista Deudas</th>
+  </tr>
+  <tr *ngFor="let cli of clientes | async">
+    <td>{{cli.dni}}</td>
+    <td>{{cli.nombre}}</td>
+    <td *ngFor="let deu of deudas | async" >{{cli.deudas}}</td>
+  </tr>
+</table>
+
+</div>
