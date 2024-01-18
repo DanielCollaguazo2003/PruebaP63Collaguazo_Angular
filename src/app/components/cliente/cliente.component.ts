@@ -1,4 +1,3 @@
-import { Cliente } from './../../models/Cliente';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Cliente } from 'src/app/models/Cliente';
@@ -13,7 +12,7 @@ import { ClienteService } from 'src/app/services/cliente.service';
 export class ClienteComponent {
   clientes: any
   cliente?: Cliente;
-  deudas: Deuda[] = [];
+  deudas: any;
 
 
   constructor(private clienteService: ClienteService) {
